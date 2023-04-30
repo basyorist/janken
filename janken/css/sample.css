@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+
+.load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 1;
+    visibility: visible;
+    z-index: 990;
+    transition: 2s all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.load_end {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    transition: 2s all;
+}
+
+.load .load_title {
+    color: #fff;
+   
+   
+    
+}
+
+.load .load_start {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.now_loding {
+    color: #fff;
+    display: none;
+    z-index: 999;
+    
+    
+
+}
+    
+
+/*点滅のコード*/
+
+
+.blink {
+    -webkit-animation: blink 3s ease infinite;
+    animation: blink 3s ease infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.start_push {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+}
+
+
+
+/* タイトルの画像 */
+.title {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.title img {
+    width: 100%;
+}
+
+/* じゃんけん小僧がやって来る */
+.title_text {
+    position: absolute;
+    top: 220px;
+    left: 280px;
+    font-size: 120px;
+    color: rgb(23, 225, 239);
+    padding: 0;
+    margin: 0;
+    text-shadow: 10px 10px 5px #ebe460;
+}
+
+/* 吹き出しSTARTボタン */
+.btn1 {
+    position: absolute;
+    top: 400px;
+    left: 800px;
+    background-color: transparent;
+
+}
+
+/* スクロールコメント */
+.flex {
+    display: flex;
+    background-color: black;
+    margin: 0;
+}
+
+.scrrol_chara {
+    padding: 3px 3px 0;
+}
+
+.scrrol_text {
+    font-size: 80px;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 32px;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+main {
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+p {
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    height: 200px;
+}
+
+ul {
+    padding: 0;
+    border-top: 1px solid #000000;
+    display: table;
+    /* 定義 */
+    table-layout: fixed;
+    width: 100%;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display: table-cell;
+    /* 定義 */
+    cursor: pointer;
+}
+
+li:hover {
+    background: #0066CC;
+    color: #fff;
+}

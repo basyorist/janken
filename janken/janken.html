@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/sample.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>ジャンケン小僧がやって来る！</title>
+</head>
+
+<body>
+  <div class="load">
+    <h1 class="load_title">『ぼくとジャンケンしてくれない？』</h1>
+    <div class="load_start" >click here</div>
+    <div class="now_loding"><figure class="blink"><img src="img/html2/continue.png" alt=""></figure></div>
+  </div>
+ 
+
+  <!-- タイトルの黒い画面（透明度100%) -->
+  <header>
+    <div class="title">
+      <a href="jyanken_sam.html">
+        <p class="btn1"><input type="image" src="img/btn.zukyun.png" width="450" height="400" alt="送信する"></p>
+      </a>
+      <img src="img/title_img.png" alt="タイトルの画像">
+
+      <h1 class="title_text">ジャンケン小僧がやって来る！</h1>
+
+    </div>
+    
+    <div class="flex" width="100%">
+      <div class="scrrol_chara" border: solid 2px #000; width: 300px; height: 100px;>
+        <img src="img/img_chara.png" alt="" width="80" height="125">
+
+      </div>
+      <div>
+        <marquee class="scrrol_text" scrolldelay="10" truespeed>
+          「ジャンケンで露伴のやつをコテンパにしてやりたい」「ジャンケンで負かすことは露伴の『心の力』を負かしたってことだ！」『きれいですばらしいエネルギーがぼくの方に！！！流れ込んでくるぞ！元気が出てくるぞ！！』『あんたの『文章』に従うくらいなら...このぼくの精神が...、あんたの命令で左右されるぐらいならッ！こうやって死んだ方がましだッ！』『あんたは今、勝負の『下り坂』にいるんですよ...。露伴先生、もう一度言いますよ。あんたは今、『下り坂』にいるンだ！』『ガラスのシャワーだ！！』</marquee>
+      </div>
+      <div>
+        <img src="img/img_stand.png" alt="" width="80" height="125">
+      </div>
+    </div>
+    
+    <script>
+      // サウンドクラス
+      let sound = new Audio("music/opening/opening.mp3");
+      //音楽を流す関数
+      function play() {
+        sound.play();
+      }
+      //ロード画面の取得
+      let LoadScreen = document.querySelector('.load');
+
+
+      //スタートボタン
+      let StartBtn = document.querySelector('.load_start');
+      //スタートボタンを押した時
+      StartBtn.addEventListener('click', () => {
+        play();
+        StartBtn.classList.add('start_push');
+        setTimeout(() => {
+          LoadScreen.classList.add('load_end');
+        }, 15320)
+      })
+
+      
+
+      // 追加
+      let startBtn = document.querySelector('.load_start');
+        let loading = document.querySelector('.now_loding');
+
+        startBtn.addEventListener('click', () => {
+          startBtn.style.display = 'none'; // load_startを非表示にする
+          loading.style.display = 'block'; // now_loadingを表示する
+          loading.style.top = `${startBtn.offsetTop}px`; // now_loadingをload_startと同じ位置に移動する
+          loading.style.left = `${startBtn.offsetLeft}px`; // now_loadingをload_startと同じ位置に移動する
+           document.querySelector('.now_loading').style.display = 'block';
+        });
+
+
+    
+
+    </script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
